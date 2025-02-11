@@ -8752,7 +8752,7 @@ footer {
     margin-bottom: 1rem;
     /* Python logo gradient colors */
     background: linear-gradient(135deg, #1E6EAA, #FFD840); /* Python colors */
-    background-clip: text; /* Clips background to text */
+    -webkit-background-clip: text; /* Clips background to text */
     -webkit-text-fill-color: transparent; /* Makes text transparent to show gradient */
 }
 
