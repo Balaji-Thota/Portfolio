@@ -8748,11 +8748,8 @@ footer {
 .certification-card i {
     font-size: 2.5rem;
     /* color: var(--secondary-color); */
+    color: linear-gradient(135deg, #3776AB, #FFD43B);
     margin-bottom: 1rem;
-    /* Python logo gradient colors */
-    background: linear-gradient(135deg, #3776AB, #FFD43B); /* Python colors */
-    -webkit-background-clip: text; /* Clips background to text */
-    -webkit-text-fill-color: transparent; /* Makes text transparent to show gradient */
 }
 
 .certification-card h3 {
@@ -9133,3 +9130,4 @@ footer {
 /* Education Section */
 .education-grid {
     display: grid;
+}
