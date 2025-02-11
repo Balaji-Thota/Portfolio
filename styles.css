@@ -8723,6 +8723,8 @@ footer {
     gap: 2rem;
     flex-wrap: wrap;
     padding: 0 1rem;
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Keep text color */
 }
 
 .certification-card {
