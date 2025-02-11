@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Function to play music
     function playMusic() {
         bgMusic.play().then(() => {
-            musicToggle.classList.add('muted');
+            musicToggle.classList.remove('muted');
             icon.classList.remove('fa-volume-mute');
             icon.classList.add('fa-volume-up');
         }).catch(error => {
@@ -23,10 +23,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Auto-play music when page loads (after user interaction)
-    document.addEventListener('click', function autoPlayHandler() {
-        playMusic();
-        document.removeEventListener('click', autoPlayHandler);
-    }, { once: true });
+    // document.addEventListener('click', function autoPlayHandler() {
+    //     playMusic();
+    //     document.removeEventListener('click', autoPlayHandler);
+    // }, { once: true });
 
     // Toggle music on button click
     musicToggle.addEventListener('click', function() {
