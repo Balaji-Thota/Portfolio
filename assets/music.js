@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
     function playMusic() {
         bgMusic.play().then(() => {
             musicToggle.classList.remove('muted');
-            icon.classList.remove('fa-volume-mute');
-            icon.classList.add('fa-volume-up');
+            icon.classList.add('fa-volume-mute');
+            icon.classList.remove('fa-volume-up');
         }).catch(error => {
             console.log("Playback failed:", error);
         });
