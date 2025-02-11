@@ -44,24 +44,26 @@ document.addEventListener('DOMContentLoaded', function () {
     const musicToggle = document.getElementById('musicToggle'); // Music toggle button
     const icon = musicToggle.querySelector('i'); // Icon inside the toggle button
 
-    // Toggle music on button click
-    musicToggle.addEventListener('click', function () {
-        console.log("Music toggle clicked");
+    // Function to play or pause music
+    function toggleMusic() {
         if (bgMusic.paused) {
-            // Play music
             bgMusic.play()
                 .then(() => {
+                    // Update the icon to volume-up when playing
                     icon.classList.remove('fa-volume-mute');
                     icon.classList.add('fa-volume-up');
                 })
                 .catch(error => {
-                    console.error("Playback failed:", error);
+                    console.error("Music playback failed:", error);
                 });
         } else {
-            // Pause music
             bgMusic.pause();
+            // Update the icon to volume-mute when paused
             icon.classList.remove('fa-volume-up');
             icon.classList.add('fa-volume-mute');
         }
-    });
+    }
+
+    // Attach event listener only to the toggle button
+    musicToggle.addEventListener('click', toggleMusic);
 });
