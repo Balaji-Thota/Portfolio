@@ -8723,6 +8723,9 @@ footer {
     gap: 2rem;
     flex-wrap: wrap;
     padding: 0 1rem;
+}
+
+.certifications-grid a {
     text-decoration: none; /* Remove underline */
     color: inherit; /* Keep text color */
 }
