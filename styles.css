@@ -1,4 +1,4 @@
-:root {
+/* :root {
     --primary-color: #0984e3;
     --secondary-color: #00b894;
     --accent-color: #00b894;
@@ -9,6 +9,20 @@
     --text-secondary: #666;
     --gradient-start: rgba(9, 132, 227, 0.03);
     --gradient-end: rgba(0, 184, 148, 0.03);
+} */
+
+:root {
+    --primary-color: #e58129; /* Bright blue for primary accents */
+    --secondary-color: #80bc50; /* Green for secondary elements */
+    --accent-color: #fb9005; /* Vibrant yellow for highlights */
+    --text-color: #202124; /* Dark gray for main text */
+    --background-color: #f5f6fa; /* Light gray for background */
+    --section-bg: #ffffff; /* Pure white for sections */
+    --card-bg: #ffffff; /* White for cards */
+    --text-secondary: #5f6368; /* Softer gray for secondary text */
+    --gradient-start: rgba(26, 115, 232, 0.1); /* Subtle blue gradient start */
+    --gradient-end: rgba(52, 168, 83, 0.1); /* Subtle green gradient end */
+
 }
 
 * {
