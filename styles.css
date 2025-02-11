@@ -8748,7 +8748,7 @@ footer {
 .certification-card i {
     font-size: 2.5rem;
     /* color: var(--secondary-color); */
-    color: linear-gradient(135deg, #3776AB, #FFD43B);
+    color: var(135deg, #3776AB, #FFD43B);
     margin-bottom: 1rem;
 }
 
