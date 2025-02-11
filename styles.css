@@ -8737,6 +8737,12 @@ footer {
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
     min-width: 250px;
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+}
+
+.certification-card:hover {
+    transform: translateY(-5px); /* Adds a lift effect on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Highlight hover */
 }
 
 .certification-card i {
@@ -8746,7 +8752,8 @@ footer {
 }
 
 .certification-card h3 {
-    color: var(--text-color);
+    /* color: var(--text-color); */
+    color: linear-gradient(135deg, #3776AB, #FFD43B);
     margin-bottom: 0.5rem;
 }
 
