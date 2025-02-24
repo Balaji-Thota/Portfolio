@@ -221,7 +221,7 @@ body {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.7rem 1.5rem;
+    padding: 0.5rem 1.0rem;
     background: rgba(9, 132, 227, 0.1);
     border-radius: 25px;
     color: #333;
