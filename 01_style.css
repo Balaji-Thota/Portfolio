@@ -243,8 +243,8 @@ body {
     margin-top: 0.5rem;
 }
 
-.download-btn, .contact-btn {
-    padding: 0.8rem 1.8rem;
+.contact-btn {
+    padding: 15px 30px;
     border-radius: 25px;
     text-decoration: none;
     font-weight: 500;
@@ -253,20 +253,12 @@ body {
     align-items: center;
     gap: 0.5rem;
     font-size: 1rem;
-}
-
-.download-btn {
-    background: var(--secondary-color);
-    color: white;
-}
-
-.contact-btn {
     background: rgba(9, 132, 227, 0.1);
     color: #333;
     border: 2px solid var(--secondary-color);
 }
 
-.download-btn:hover, .contact-btn:hover {
+.contact-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
@@ -302,25 +294,6 @@ body {
     z-index: 1;
 }
 
-.particles {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-}
-
-.particle {
-    position: absolute;     
-    width: 8px;
-    height: 8px;
-    background: white;
-    border-radius: 50%;
-    pointer-events: none;
-    opacity: 0;
-}
-
 @keyframes explode {
     0% {
         transform: translate(0, 0);
@@ -331,36 +304,6 @@ body {
         opacity: 0;
     }
 }
-
-.download-button:active .particle {
-    animation: explode 0.8s ease-out forwards;
-}
-
-.particle:nth-child(1) { --tx: -20px; --ty: -20px; }
-.particle:nth-child(2) { --tx: 20px; --ty: -20px; }
-.particle:nth-child(3) { --tx: -20px; --ty: 20px; }
-.particle:nth-child(4) { --tx: 20px; --ty: 20px; }
-.particle:nth-child(5) { --tx: -30px; --ty: 0px; }
-.particle:nth-child(6) { --tx: 30px; --ty: 0px; }
-.particle:nth-child(7) { --tx: 0px; --ty: -30px; }
-.particle:nth-child(8) { --tx: 0px; --ty: 30px; }
-.particle:nth-child(9) { --tx: -25px; --ty: -10px; }
-.particle:nth-child(10) { --tx: 25px; --ty: -10px; }
-.particle:nth-child(11) { --tx: -10px; --ty: 25px; }
-.particle:nth-child(12) { --tx: 10px; --ty: -25px; }
-
-.download-button:active .particle:nth-child(1) { animation-delay: 0s; }
-.download-button:active .particle:nth-child(2) { animation-delay: 0.05s; }
-.download-button:active .particle:nth-child(3) { animation-delay: 0.1s; }
-.download-button:active .particle:nth-child(4) { animation-delay: 0.15s; }
-.download-button:active .particle:nth-child(5) { animation-delay: 0.2s; }
-.download-button:active .particle:nth-child(6) { animation-delay: 0.25s; }
-.download-button:active .particle:nth-child(7) { animation-delay: 0.3s; }
-.download-button:active .particle:nth-child(8) { animation-delay: 0.35s; }
-.download-button:active .particle:nth-child(9) { animation-delay: 0.4s; }
-.download-button:active .particle:nth-child(10) { animation-delay: 0.45s; }
-.download-button:active .particle:nth-child(11) { animation-delay: 0.5s; }
-.download-button:active .particle:nth-child(12) { animation-delay: 0.55s; }
 
 .download-button::after {
     content: '';
