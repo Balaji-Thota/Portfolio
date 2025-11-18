@@ -17,6 +17,16 @@
 
         gtag('config', 'G-5TD17JD596');
     </script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "gScyiTn_bDvH0gOFh",
+        });
+    })();
+    </script>
 </head>
 <body>
     <nav class="navbar">
@@ -549,48 +559,43 @@
 
     <section id="contact" class="section">
         <div class="section-transition"></div>
-        <div class="section-content">
-            <h2 class="section-title">Let's Connect</h2>
-            <div class="contact-content">
-                <p>Have feedback on my portfolio or want to get in touch? Leave me a message! I'm always interested in discussing about opportunities and collaborations.</p>
-                <form action="https://formspree.io/f/xrbybzqq" method="POST" class="connect-form">
-                    <input type="hidden" name="_subject" value="New Portfolio Message for Balaji Thota">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="_replyto" placeholder="Your Email" required>
-                    <textarea name="message" rows="4" placeholder="Your Message or Feedback..." required></textarea>
-                    <button type="submit"><i class="fas fa-paper-plane"></i> Send Message</button>
-                </form>
-                <div class="contact-links">
-                    <a href="https://www.linkedin.com/in/balajithota/" class="contact-button" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-linkedin"></i> LinkedIn
-                    </a>
-                    <a href="https://github.com/Balaji-Thota" class="contact-button" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
+            <div class="section-content">
+                <h2 class="section-title">Let's Connect</h2>
+
+                <div class="contact-content">
+                    <p>
+                        Have feedback on my portfolio or want to get in touch?
+                        Leave me a message! I'm always interested in discussing opportunities and collaborations.
+                    </p>
+
+                    <form id="connectForm" class="connect-form">
+                        <input type="text"   name="name"   placeholder="Your Name"   required>
+                        <input type="email"  name="email"  placeholder="Your Email"  required>
+                        <textarea name="message" rows="4" placeholder="Your Message or Feedback..." required></textarea>
+                        <button id="sendBtn" type="button"><i class="fas fa-paper-plane"></i> Send Message</button>
+                        <div id="formResponse"></div>
+                    </form>     
+                    <div class="contact-links">
+                        <a href="https://www.linkedin.com/in/balajithota/" class="contact-button" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="https://github.com/Balaji-Thota" class="contact-button" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
     </section>
 
     <footer>
         <p>&copy; 2025 Balaji Thota | All Rights Reserved</p>
     </footer>
 
-    <!-- <audio id="bgMusic" loop>
-        <source src="./background-music.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
-    </audio>
-    
-    <div id="musicToggle" class="music-toggle">
-        <i class="fas fa-volume-mute"></i>
-    </div> -->
-
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
     <script src="script.js"></script>
-    <script src="assets/js/music.js"></script>
 
 </body>
 </html>

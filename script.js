@@ -57,7 +57,7 @@ document.querySelectorAll('.timeline-item').forEach((item, index) => {
 const mobileMenuButton = document.createElement('button');
 mobileMenuButton.classList.add('mobile-menu-button');
 mobileMenuButton.innerHTML = '<i class="fas fa-bars"></i>';
-document.querySelector('.nav-content').prepend(mobileMenuButton);
+document.querySelector('.container').prepend(mobileMenuButton);
 
 mobileMenuButton.addEventListener('click', () => {
     document.querySelector('.nav-links').classList.toggle('show');
@@ -113,3 +113,44 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+
+// Minimal direct send (no form binding)
+(() => {
+  const form = document.getElementById("connectForm");
+  const btn  = document.getElementById("sendBtn");
+  const box  = document.getElementById("formResponse");
+
+  if (!form || !btn || !window.emailjs) return;
+
+  btn.addEventListener("click", async () => {
+    // quick sanity logs (you can remove later)
+    console.log("EmailJS loaded?", !!window.emailjs);
+
+    const name    = form.elements["name"]?.value || "";
+    const email   = form.elements["email"]?.value || "";
+    const message = form.elements["message"]?.value || "";
+
+    if (!name || !email || !message) {
+      if (box) box.textContent = "Please fill all fields.";
+      return;
+    }
+
+    const original = btn.innerHTML;
+    btn.disabled = true;
+    btn.innerHTML = "Sending...";
+
+    try {
+      // send() uses explicit params instead of parsing the form
+      await emailjs.send("service_vjx4ewm", "template_wqrhest", { name, email, message });
+      form.reset();
+      if (box) box.textContent = "✅ Message sent. Thank you!";
+    } catch (err) {
+      console.error("EmailJS error:", err);
+      if (box) box.textContent = "❌ Failed to send. Check IDs/keys in EmailJS.";
+    } finally {
+      btn.disabled = false;
+      btn.innerHTML = original;
+    }
+  });
+})();
