@@ -56,7 +56,7 @@ document.querySelectorAll('.timeline-item').forEach((item, index) => {
 // Mobile menu toggle
 const mobileMenuButton = document.createElement('button');
 mobileMenuButton.classList.add('mobile-menu-button');
-mobileMenuButton.innerHTML = '<i class="fas fa-bars"></i>';
+// mobileMenuButton.innerHTML = '<i class="fas fa-bars"></i>';
 document.querySelector('.container').prepend(mobileMenuButton);
 
 mobileMenuButton.addEventListener('click', () => {
